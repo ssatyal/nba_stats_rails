@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621182055) do
+ActiveRecord::Schema.define(version: 20160621202522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "players", force: :cascade do |t|
+    t.string  "name"
+    t.float   "gamesplayed"
+    t.float   "minutespg"
+    t.float   "pointspg"
+    t.float   "fgpct"
+    t.float   "threeptpct"
+    t.float   "ftpct"
+    t.float   "reboundspg"
+    t.float   "trueshootingpct"
+    t.float   "assistratio"
+    t.float   "turnoverratio"
+    t.float   "usage"
+    t.float   "per"
+    t.integer "team_id"
+  end
+
+  add_index "players", ["team_id"], name: "index_players_on_team_id", using: :btree
 
   create_table "teams", force: :cascade do |t|
     t.string   "team"
@@ -27,4 +46,5 @@ ActiveRecord::Schema.define(version: 20160621182055) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "players", "teams"
 end

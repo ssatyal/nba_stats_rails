@@ -7,7 +7,7 @@ class CreatePlayersTable < ActiveRecord::Migration
       t.float :pointspg
       t.float :fgpct
       t.float :threeptpct
-      f.float :ftpct
+      t.float :ftpct
       t.float :reboundspg
       t.float :trueshootingpct
       t.float :assistratio

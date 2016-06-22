@@ -15,12 +15,12 @@
     Team
   ])
   .controller("indexCtrl", [
-    "Trip",
+    "Team",
     indexControllerFunction
   ])
 
   function Team( $resource ){
-    var Trip = $resource( "/teams/:id.json", {}, {
+    var Team = $resource( "/teams/:id.json", {}, {
       update: {
         method: "PUT",
         isArray: true
@@ -30,7 +30,7 @@
     return Team;
   };
 
-  function indexControllerFunction( Trip ){
+  function indexControllerFunction( Team ){
     var indexVM = this;
     indexVM.teams = Team.all;
   };
@@ -38,7 +38,7 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("teamIndex", {
-      url: "/teams",
+      url: "/",
       templateUrl: "/ng-views/team.index.html",
       controller: "indexCtrl",
       controllerAs: "indexVM"

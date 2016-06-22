@@ -18,6 +18,20 @@ fgpct: 0.487,
 threeptpct: 0.416,
 assistspg: 28.9)
 
+gsw.players.create(name: "Stephen Curry",
+gamesplayed: 79,
+minutespg: 34.2,
+pointspg: 30.1,
+fgpct: 0.504,
+threeptpct: 0.454,
+ftpct: 0.908,
+reboundspg: 5.4,
+trueshootingpct: 0.669,
+assistratio: 20.6,
+turnoverratio: 10.2,
+usage: 31.6,
+per: 31.56)
+
 okc = Team.create(team: "Oklahoma City Thunder",
 wins: 55,
 losses: 27,
@@ -278,3 +292,17 @@ dpointspg: 106.9,
 fgpct: 0.414,
 threeptpct: 0.317,
 assistspg: 18.0)
+
+# .players.create(name: ,
+# gamesplayed: ,
+# minutespg: ,
+# pointspg: ,
+# fgpct: ,
+# threeptpct: ,
+# ftpct: ,
+# reboundspg: ,
+# trueshootingpct: ,
+# assistratio: ,
+# turnoverratio: ,
+# usage: ,
+# per: )

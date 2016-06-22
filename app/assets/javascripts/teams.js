@@ -38,7 +38,7 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("teamIndex", {
-      url: "/",
+      url: "/teams",
       templateUrl: "/ng-views/team.index.html",
       controller: "indexCtrl",
       controllerAs: "indexVM"

@@ -1,3 +1,11 @@
-<div data-ng-repeat="team in indexVM.teams">
-  <h3>{{team.team}}</h3>
-</div>
+<h3>Averages per Game</h3>
+<table>
+  <tr>
+    <th>Team</th>
+    <th>Points</th>
+  </tr>
+  <tr data-ng-repeat="team in indexVM.teams">
+    <td>{{team.team}}</td>
+    <td>{{team.pointspg}}</td>
+  </tr>
+</table>

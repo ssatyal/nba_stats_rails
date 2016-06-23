@@ -4,6 +4,7 @@
     <th>Team</th>
     <th>Wins</th>
     <th>Losses</th>
+    <th>Win %</th>
     <th>Points</th>
     <th>Opp Points</th>
     <th>FG%</th>
@@ -14,10 +15,11 @@
     <td>{{team.team}}</td>
     <td>{{team.wins}}</td>
     <td>{{team.losses}}</td>
-    <td>{{team.pointspg}}</td>
-    <td>{{team.dpointspg}}</td>
-    <td>{{team.fgpct}}</td>
-    <td>{{team.threeptpct}}</td>
-    <td>{{team.assistspg}}</td>
+    <td>{{(team.wins / 82) * 100 | number: 1}}%</td>
+    <td>{{team.pointspg | number: 1}}</td>
+    <td>{{team.dpointspg | number: 1}}</td>
+    <td>{{team.fgpct * 100 | number: 1}}%</td>
+    <td>{{team.threeptpct * 100 | number: 1}}%</td>
+    <td>{{team.assistspg | number: 1}}</td>
   </tr>
 </table>

@@ -1,7 +1,8 @@
 <h3>stats</h3>
+<div data-ng-controller="indexCtrl">
 <table>
   <tr>
-    <th>Team</th>
+    <th><a href="#" data-ng-click="sortType = 'team'; sortReverse = !sortReverse">Team</a></th>
     <th>Wins</th>
     <th>Losses</th>
     <th>Win %</th>
@@ -11,7 +12,7 @@
     <th>3PT%</th>
     <th>Assists</th>
   </tr>
-  <tr data-ng-repeat="team in indexVM.teams">
+  <tr data-ng-repeat="team in indexVM.teams | orderBy:sortType:sortReverse">
     <td>{{team.team}}</td>
     <td>{{team.wins}}</td>
     <td>{{team.losses}}</td>
@@ -23,3 +24,4 @@
     <td>{{team.assistspg | number: 1}}</td>
   </tr>
 </table>
+</div>

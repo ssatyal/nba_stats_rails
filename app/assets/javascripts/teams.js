@@ -16,6 +16,7 @@
   ])
   .controller("indexCtrl", [
     "Team",
+    "$scope",
     indexControllerFunction
   ])
 
@@ -30,9 +31,11 @@
     return Team;
   };
 
-  function indexControllerFunction( Team ){
+  function indexControllerFunction( Team, $scope ){
     var indexVM = this;
     indexVM.teams = Team.all;
+    $scope.sortType = 'wins';
+    $scope.sortReverse = true;
   };
 
   function RouterFunction($stateProvider){

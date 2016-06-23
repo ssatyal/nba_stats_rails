@@ -3,14 +3,14 @@
 <table>
   <tr>
     <th><a href="#" data-ng-click="sortType = 'team'; sortReverse = !sortReverse">Team</a></th>
-    <th>Wins</th>
-    <th>Losses</th>
-    <th>Win %</th>
-    <th>Points</th>
-    <th>Opp Points</th>
-    <th>FG%</th>
-    <th>3PT%</th>
-    <th>Assists</th>
+    <th><a href="#" data-ng-click="sortType = 'wins'; sortReverse = !sortReverse">Wins</a></th>
+    <th><a href="#" data-ng-click="sortType = 'losses'; sortReverse = !sortReverse">Losses</a></th>
+    <th><a href="#" data-ng-click="sortType = 'wins/82'; sortReverse = !sortReverse">Win %</a></th>
+    <th><a href="#" data-ng-click="sortType = 'pointspg'; sortReverse = !sortReverse">Points</a></th>
+    <th><a href="#" data-ng-click="sortType = 'dpointspg'; sortReverse = !sortReverse">Opp Points</a></th>
+    <th><a href="#" data-ng-click="sortType = 'fgpct'; sortReverse = !sortReverse">FG%</a></th>
+    <th><a href="#" data-ng-click="sortType = 'threeptpct'; sortReverse = !sortReverse">3PT%</a></th>
+    <th><a href="#" data-ng-click="sortType = 'assistspg'; sortReverse = !sortReverse">Assists</a></th>
   </tr>
   <tr data-ng-repeat="team in indexVM.teams | orderBy:sortType:sortReverse">
     <td>{{team.team}}</td>

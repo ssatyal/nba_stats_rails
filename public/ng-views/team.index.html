@@ -1,11 +1,23 @@
-<h3>Averages per Game</h3>
+<h3>stats</h3>
 <table>
   <tr>
     <th>Team</th>
+    <th>Wins</th>
+    <th>Losses</th>
     <th>Points</th>
+    <th>Opp Points</th>
+    <th>FG%</th>
+    <th>3PT%</th>
+    <th>Assists</th>
   </tr>
   <tr data-ng-repeat="team in indexVM.teams">
     <td>{{team.team}}</td>
+    <td>{{team.wins}}</td>
+    <td>{{team.losses}}</td>
     <td>{{team.pointspg}}</td>
+    <td>{{team.dpointspg}}</td>
+    <td>{{team.fgpct}}</td>
+    <td>{{team.threeptpct}}</td>
+    <td>{{team.assistspg}}</td>
   </tr>
 </table>

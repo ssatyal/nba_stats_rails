@@ -2,15 +2,50 @@
 <div data-ng-controller="indexCtrl">
 <table>
   <tr>
-    <th><a href="#" data-ng-click="sortType = 'team'; sortReverse = !sortReverse">Team</a></th>
-    <th><a href="#" data-ng-click="sortType = 'wins'; sortReverse = !sortReverse">Wins</a></th>
-    <th><a href="#" data-ng-click="sortType = 'losses'; sortReverse = !sortReverse">Losses</a></th>
-    <th><a href="#" data-ng-click="sortType = 'wins/82'; sortReverse = !sortReverse">Win %</a></th>
-    <th><a href="#" data-ng-click="sortType = 'pointspg'; sortReverse = !sortReverse">Points</a></th>
-    <th><a href="#" data-ng-click="sortType = 'dpointspg'; sortReverse = !sortReverse">Opp Points</a></th>
-    <th><a href="#" data-ng-click="sortType = 'fgpct'; sortReverse = !sortReverse">FG%</a></th>
-    <th><a href="#" data-ng-click="sortType = 'threeptpct'; sortReverse = !sortReverse">3PT%</a></th>
-    <th><a href="#" data-ng-click="sortType = 'assistspg'; sortReverse = !sortReverse">Assists</a></th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'team'; sortReverse = !sortReverse">Team <span ng-show="sortType == 'team' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'team' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+    </th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'wins'; sortReverse = !sortReverse">Wins <span ng-show="sortType == 'wins' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'wins' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+    </th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'losses'; sortReverse = !sortReverse">Losses <span ng-show="sortType == 'losses' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'losses' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+    </th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'wins/82'; sortReverse = !sortReverse">Win % <span ng-show="sortType == 'wins/82' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'wins/82' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+    </th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'pointspg'; sortReverse = !sortReverse">Points <span ng-show="sortType == 'pointspg' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'pointspg' && sortReverse" class="fa fa-caret-up"></span></a>
+    </th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'dpointspg'; sortReverse = !sortReverse">Opp Points <span ng-show="sortType == 'dpointspg' && !sortReverse" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'dpointspg' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+    </th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'fgpct'; sortReverse = !sortReverse">FG% <span ng-show="sortType == 'fgpct' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'fgpct' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+    </th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'threeptpct'; sortReverse = !sortReverse">3PT% <span ng-show="sortType == 'threeptpct' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'threeptpct' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+    </th>
+    <th>
+      <a href="#" data-ng-click="sortType = 'assistspg'; sortReverse = !sortReverse">Assists <span ng-show="sortType == 'assistspg' && !sortReverse" class="fa fa-caret-down"></span>
+      <span ng-show="sortType == 'assistspg' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+    </th>
   </tr>
   <tr data-ng-repeat="team in indexVM.teams | orderBy:sortType:sortReverse">
     <td>{{team.team}}</td>

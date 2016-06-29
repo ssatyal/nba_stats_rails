@@ -22,3 +22,10 @@ td {
 tbody tr:nth-child(odd) {
   background-color: #eee;
 }
+thead {
+  background-color: #37BC61;
+}
+thead a, thead a:hover, thead a:active, thead a:visited {
+  color: white;
+  text-decoration: none;
+}

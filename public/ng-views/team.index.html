@@ -1,6 +1,7 @@
 <h3>stats</h3>
 <div data-ng-controller="indexCtrl">
 <table>
+  <thead>
   <tr>
     <th>
       <a href="#" data-ng-click="sortType = 'team'; sortReverse = !sortReverse">Team <span ng-show="sortType == 'team' && !sortReverse" class="fa fa-caret-down"></span>
@@ -47,6 +48,8 @@
       </a>
     </th>
   </tr>
+  </thead>
+  <tbody>
   <tr data-ng-repeat="team in indexVM.teams | orderBy:sortType:sortReverse">
     <td>{{team.team}}</td>
     <td>{{team.wins}}</td>
@@ -58,5 +61,6 @@
     <td>{{team.threeptpct * 100 | number: 1}}%</td>
     <td>{{team.assistspg | number: 1}}</td>
   </tr>
+  </tbody>
 </table>
 </div>

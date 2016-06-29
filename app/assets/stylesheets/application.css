@@ -14,8 +14,11 @@
  *= require_self
  */
 th {
-  padding: 5px;
+  padding: 0 5px 0 5px;
 }
 td {
   padding: 0 5px 0 5px;
+}
+tbody tr:nth-child(odd) {
+  background-color: #eee;
 }

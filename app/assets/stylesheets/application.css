@@ -29,3 +29,16 @@ thead a, thead a:hover, thead a:active, thead a:visited {
   color: white;
   text-decoration: none;
 }
+#header {
+  height: 150px;
+  background-image: url('http://www.psdgraphics.com/file/basketball-floor-texture.jpg');
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  line-height: 150px;
+}
+h1 {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}

@@ -37,7 +37,9 @@ thead a, thead a:hover, thead a:active, thead a:visited {
   text-align: center;
   line-height: 150px;
 }
-h1 {
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
